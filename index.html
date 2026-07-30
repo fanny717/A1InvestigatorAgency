@@ -1,0 +1,928 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A1InvestigatorAgency | Certicate Ethical Hacker For Hire</title>
+<meta name="description" content="A1InvestigatorAgency helps connect to a private investigator trace and recover lost or stolen digital assets. Submit a request and track its progress online">
+<meta name="keywords" content="ethical hacker service, custom programming, digital recovery, crypto recovery service, cryptocurrency wallet recovery, blockchain forensics, request tracking">
+<meta name="author" content="A1InvestigatorAgency">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.codevaultsolutions.example/">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="A1InvestigatorAgency | Certicate Ethical Hacker For Hire">
+<meta property="og:description" content="A1InvestigatorAgency digital asset recovery and cryptocurrency recovery support, with transparent request tracking from start to finish.">
+<meta property="og:url" content="https://www.codevaultsolutions.example/">
+<meta property="og:site_name" content="A1InvestigatorAgency">
+<meta property="og:image" content="https://www.codevaultsolutions.example/assets/og-image.jpg">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="A1InvestigatorAgency | Certicate Ethical Hacker For Hire">
+<meta name="twitter:description" content="Digital asset and cryptocurrency recovery support, with transparent request tracking from start to finish.">
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>&#128187;</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "CodeVault Solutions",
+  "description": "Digital asset and cryptocurrency asset recovery services.",
+  "url": "https://www.codevaultsolutions.example/",
+  "areaServed": "Worldwide",
+  "serviceType": ["Digital asset", "Cryptocurrency Recovery Assistance", "Blockchain Forensics"]
+}
+</script>
+
+<style>
+/* =========================================================
+   DESIGN TOKENS
+   ========================================================= */
+:root{
+  --bg:            #0A0E13;
+  --bg-raised:     #10161D;
+  --surface:       #151C24;
+  --border:        #232C36;
+  --text:          #E7EDF3;
+  --text-muted:    #8B98A6;
+  --accent:        #29E0A8;   /* terminal green */
+  --accent-dim:    #1A9B76;
+  --accent-blue:   #5B8CFF;   /* trust / security blue */
+  --accent-blue-dim:#3E63C4;
+  --warn:          #F2A94E;
+  --radius:        10px;
+  --mono: 'JetBrains Mono', 'IBM Plex Mono', Menlo, Consolas, monospace;
+  --sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --display: 'Space Grotesk', var(--sans);
+  --max-w: 1140px;
+}
+
+*{ box-sizing:border-box; }
+html{ scroll-behavior:smooth; }
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--text);
+  font-family:var(--sans);
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+}
+a{ color:inherit; text-decoration:none; }
+img{ max-width:100%; display:block; }
+ul{ margin:0; padding:0; list-style:none; }
+h1,h2,h3,h4{ font-family:var(--display); margin:0 0 .5em; line-height:1.15; font-weight:600; letter-spacing:-0.01em; }
+p{ margin:0 0 1em; color:var(--text-muted); }
+.container{ max-width:var(--max-w); margin:0 auto; padding:0 24px; }
+
+:focus-visible{ outline:2px solid var(--accent); outline-offset:3px; }
+
+/* BACKGROUND */
+.code-bg{
+  position:fixed; inset:0; z-index:-1;
+  background:
+    radial-gradient(circle at 15% 10%, rgba(41,224,168,0.08), transparent 40%),
+    radial-gradient(circle at 85% 30%, rgba(91,140,255,0.08), transparent 45%),
+    linear-gradient(var(--bg), var(--bg));
+  overflow:hidden;
+}
+.code-bg::before{
+  content:"";
+  position:absolute; inset:-50%;
+  background-image:
+    linear-gradient(rgba(41,224,168,0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(41,224,168,0.05) 1px, transparent 1px);
+  background-size:42px 42px;
+  transform:rotate(2deg);
+}
+.code-bg .glyphs{
+  position:absolute; inset:0;
+  font-family:var(--mono); font-size:13px;
+  color:rgba(41,224,168,0.06);
+  white-space:pre; line-height:1.4; padding:20px;
+  user-select:none;
+}
+
+/* HEADER / NAV */
+.site-header{
+  position:sticky; top:0; z-index:50;
+  background:rgba(10,14,19,0.85);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--border);
+}
+.nav{
+  display:flex; align-items:center; justify-content:space-between;
+  padding:16px 24px; max-width:var(--max-w); margin:0 auto;
+}
+.logo{ font-family:var(--mono); font-weight:600; font-size:1.05rem; color:var(--text); display:flex; align-items:center; gap:8px; cursor:pointer; }
+.logo .dot{ color:var(--accent); }
+.nav-links{ display:flex; gap:28px; }
+.nav-links a{ font-size:.92rem; color:var(--text-muted); padding:6px 2px; border-bottom:2px solid transparent; transition:color .15s, border-color .15s; cursor:pointer; }
+.nav-links a:hover, .nav-links a.active{ color:var(--text); border-color:var(--accent); }
+.nav-cta{ background:var(--accent); color:#03110C; padding:9px 18px; border-radius:8px; font-weight:600; font-size:.88rem; cursor:pointer; }
+.nav-cta:hover{ background:#3ff0bb; }
+.nav-toggle{ display:none; background:none; border:0; color:var(--text); font-size:1.4rem; cursor:pointer; }
+
+@media (max-width: 780px){
+  .nav-links{
+    position:absolute; top:100%; left:0; right:0;
+    background:var(--bg-raised); border-bottom:1px solid var(--border);
+    flex-direction:column; padding:16px 24px; gap:14px; display:none;
+  }
+  .nav-links.open{ display:flex; }
+  .nav-toggle{ display:block; }
+}
+/* Narrow phones (~320–400px): shrink nav padding/text so nothing wraps or overflows */
+@media (max-width:400px){
+  .nav{ padding:14px 16px; }
+  .logo{ font-size:.92rem; }
+  .nav-cta{ padding:8px 12px; font-size:.8rem; }
+}
+
+.eyebrow{ font-family:var(--mono); text-transform:uppercase; letter-spacing:.14em; font-size:.72rem; color:var(--accent); margin-bottom:14px; display:inline-flex; align-items:center; gap:8px; }
+.eyebrow::before{ content:"//"; color:var(--accent-dim); }
+
+/* HERO */
+.hero{ padding:96px 0 72px; }
+.hero-grid{ display:grid; grid-template-columns:1.1fr .9fr; gap:56px; align-items:center; }
+
+/* iPad landscape and small laptops: keep side-by-side but tighten spacing */
+@media (max-width:1024px){
+  .hero{ padding:72px 0 56px; }
+  .hero-grid{ gap:36px; }
+}
+/* iPad portrait and phones: stack hero content above the terminal */
+@media (max-width:860px){
+  .hero-grid{ grid-template-columns:1fr; }
+  .hero .lede{ max-width:100%; }
+}
+.hero h1{ font-size:clamp(2.1rem, 4vw, 3.2rem); }
+.hero h1 span{ color:var(--accent); }
+.hero .lede{ font-size:1.08rem; max-width:520px; }
+.btn-row{ display:flex; gap:14px; flex-wrap:wrap; margin-top:28px; }
+
+.btn{ display:inline-flex; align-items:center; gap:8px; padding:13px 24px; border-radius:8px; font-weight:600; font-size:.94rem; transition:transform .15s, background .15s, border-color .15s; border:1px solid transparent; cursor:pointer; }
+.btn-primary{ background:var(--accent); color:#03110C; }
+.btn-primary:hover{ background:#3ff0bb; transform:translateY(-1px); }
+.btn-secondary{ border-color:var(--border); color:var(--text); background:var(--surface); }
+.btn-secondary:hover{ border-color:var(--accent-blue); }
+
+/* Terminal */
+.terminal{ background:#0D1219; border:1px solid var(--border); border-radius:12px; box-shadow:0 20px 60px -20px rgba(0,0,0,.6); overflow:hidden; }
+.terminal-bar{ display:flex; gap:8px; align-items:center; padding:11px 14px; background:#111826; border-bottom:1px solid var(--border); }
+.terminal-bar span{ width:11px; height:11px; border-radius:50%; background:#3a4451; }
+.terminal-bar span:nth-child(1){ background:#F26D6D; }
+.terminal-bar span:nth-child(2){ background:#F2C14E; }
+.terminal-bar span:nth-child(3){ background:#29E0A8; }
+.terminal-title{ margin-left:8px; font-family:var(--mono); font-size:.78rem; color:var(--text-muted); }
+.terminal-body{ font-family:var(--mono); font-size:.86rem; padding:22px; min-height:210px; color:#B9E9D6; }
+.terminal-body .line{ display:block; margin-bottom:8px; white-space:pre-wrap; }
+.terminal-body .prompt{ color:var(--accent-blue); }
+.terminal-body .ok{ color:var(--accent); }
+.cursor{ display:inline-block; width:8px; height:1em; background:var(--accent); vertical-align:middle; animation:blink 1s steps(1) infinite; }
+@keyframes blink{ 50%{ opacity:0; } }
+@media (prefers-reduced-motion: reduce){ .cursor{ animation:none; } }
+
+/* SECTIONS */
+.page-section{ padding:0; }
+.page-section > section{ padding:72px 0; }
+.section-head{ max-width:640px; margin-bottom:44px; }
+.section-head h2{ font-size:clamp(1.6rem,3vw,2.2rem); }
+
+.grid-3{ display:grid; grid-template-columns:repeat(3,1fr); gap:24px; }
+.grid-2{ display:grid; grid-template-columns:repeat(2,1fr); gap:24px; }
+
+/* Tablet (iPad portrait/landscape, ~701px–1024px): 3-col grids become 2-col */
+@media (max-width:1024px){
+  .grid-3{ grid-template-columns:repeat(2,1fr); }
+}
+/* Phone (≤700px): everything stacks to a single column */
+@media (max-width:700px){
+  .grid-3, .grid-2{ grid-template-columns:1fr; }
+}
+
+.card{ background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); padding:28px; transition:border-color .2s, transform .2s; }
+.card:hover{ border-color:var(--accent-dim); transform:translateY(-3px); }
+.card .icon{ width:42px; height:42px; border-radius:8px; display:flex; align-items:center; justify-content:center; background:rgba(41,224,168,0.1); color:var(--accent); font-family:var(--mono); font-weight:700; margin-bottom:16px; }
+.card.blue .icon{ background:rgba(91,140,255,0.1); color:var(--accent-blue); }
+.card h3{ font-size:1.08rem; }
+.card p{ font-size:.92rem; margin-bottom:0; }
+.tag{ display:inline-block; font-family:var(--mono); font-size:.7rem; letter-spacing:.06em; padding:3px 8px; border-radius:5px; background:rgba(91,140,255,0.12); color:var(--accent-blue); margin-bottom:12px; }
+
+.divider{ height:1px; background:var(--border); border:0; margin:0; }
+
+/* TESTIMONIALS */
+.testimonials{ overflow:hidden; }
+.testi-row{ display:flex; margin-bottom:26px; clear:both; }
+.testi-row.left{ justify-content:flex-start; }
+.testi-row.right{ justify-content:flex-end; }
+.testi-card{ max-width:520px; background:var(--bg-raised); border:1px solid var(--border); border-radius:var(--radius); padding:22px 24px; position:relative; }
+.testi-row.left .testi-card{ border-left:3px solid var(--accent); }
+.testi-row.right .testi-card{ border-right:3px solid var(--accent-blue); }
+.testi-quote{ font-size:.95rem; color:var(--text); margin-bottom:14px; }
+.testi-meta{ display:flex; align-items:center; gap:12px; }
+.testi-avatar{ width:36px; height:36px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-family:var(--mono); font-weight:700; font-size:.85rem; color:#03110C; background:var(--accent); flex-shrink:0; }
+.testi-row.right .testi-avatar{ background:var(--accent-blue); }
+.testi-name{ font-weight:600; font-size:.88rem; color:var(--text); }
+.testi-role{ font-size:.78rem; color:var(--text-muted); }
+.testi-note{ font-family:var(--mono); font-size:.74rem; color:var(--text-muted); margin-top:36px; text-align:center; }
+@media (max-width:700px){ .testi-row.left, .testi-row.right{ justify-content:flex-start; } .testi-card{ max-width:100%; } }
+
+/* FORMS */
+.form-card{ background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); padding:36px; }
+.field{ margin-bottom:20px; }
+.field label{ display:block; font-size:.85rem; margin-bottom:8px; color:var(--text); font-weight:600; }
+.field .hint{ font-size:.76rem; color:var(--text-muted); margin-top:6px; }
+input, select, textarea{ width:100%; padding:12px 14px; background:var(--bg-raised); border:1px solid var(--border); border-radius:8px; color:var(--text); font-family:var(--sans); font-size:.92rem; }
+input:focus, select:focus, textarea:focus{ border-color:var(--accent); }
+textarea{ min-height:120px; resize:vertical; }
+.field-row{ display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+@media (max-width:600px){ .field-row{ grid-template-columns:1fr; } }
+
+.alert{ padding:16px 18px; border-radius:8px; font-size:.88rem; margin-bottom:24px; display:none; }
+.alert.show{ display:block; }
+.alert-success{ background:rgba(41,224,168,0.1); border:1px solid var(--accent-dim); color:var(--accent); }
+.alert-error{ background:rgba(242,109,109,0.1); border:1px solid #F26D6D; color:#F26D6D; }
+.ref-box{ font-family:var(--mono); background:var(--bg-raised); border:1px dashed var(--accent-dim); padding:14px 16px; border-radius:8px; margin-top:10px; font-size:.95rem; color:var(--accent); }
+
+/* TRACKING */
+.track-steps{ display:flex; flex-direction:column; gap:0; margin-top:32px; }
+.track-step{ display:flex; gap:18px; padding-bottom:32px; position:relative; }
+.track-step:not(:last-child)::before{ content:""; position:absolute; left:15px; top:34px; bottom:0; width:2px; background:var(--border); }
+.track-step.done:not(:last-child)::before{ background:var(--accent-dim); }
+.track-dot{ width:32px; height:32px; border-radius:50%; background:var(--bg-raised); border:2px solid var(--border); display:flex; align-items:center; justify-content:center; font-size:.8rem; flex-shrink:0; z-index:1; color:var(--text-muted); }
+.track-step.done .track-dot{ background:var(--accent); border-color:var(--accent); color:#03110C; }
+.track-step.current .track-dot{ border-color:var(--accent-blue); color:var(--accent-blue); }
+.track-step h4{ margin-bottom:4px; font-size:.98rem; }
+.track-step p{ font-size:.85rem; margin-bottom:0; }
+
+/* ABOUT */
+.stat-row{ display:flex; gap:40px; flex-wrap:wrap; margin-top:8px; }
+.stat b{ display:block; font-family:var(--display); font-size:1.9rem; color:var(--accent); }
+.stat span{ font-size:.8rem; color:var(--text-muted); font-family:var(--mono); }
+
+/* FOOTER */
+.site-footer{ border-top:1px solid var(--border); padding:48px 0 28px; margin-top:40px; }
+.footer-grid{ display:grid; grid-template-columns:2fr 1fr 1fr; gap:32px; margin-bottom:32px; }
+@media (max-width:900px){ .footer-grid{ grid-template-columns:1fr 1fr; } .footer-grid > div:first-child{ grid-column:1 / -1; } }
+@media (max-width:600px){ .footer-grid{ grid-template-columns:1fr; } }
+.footer-grid h4{ font-size:.85rem; color:var(--text); margin-bottom:14px; }
+.footer-grid ul li{ margin-bottom:9px; }
+.footer-grid ul a{ color:var(--text-muted); font-size:.88rem; cursor:pointer; }
+.footer-grid ul a:hover{ color:var(--accent); }
+.footer-bottom{ display:flex; justify-content:space-between; flex-wrap:wrap; gap:12px; font-size:.78rem; color:var(--text-muted); border-top:1px solid var(--border); padding-top:20px; }
+.disclaimer{ font-size:.76rem; color:var(--text-muted); max-width:820px; margin-top:14px; line-height:1.6; }
+
+.page-hero{ padding:56px 0 40px; border-bottom:1px solid var(--border); }
+.page-hero .eyebrow{ margin-bottom:10px; }
+.page-hero p{ max-width:640px; }
+
+/* SPA page visibility */
+.page{ display:none; }
+.page.active{ display:block; }
+</style>
+</head>
+<body>
+<div class="code-bg"><div class="glyphs"></div></div>
+
+<header class="site-header">
+  <nav class="nav">
+    <a data-nav="home" class="logo">&lt;A1InvestigatorAgency<span class="dot">/</span>&gt;</a>
+    <button class="nav-toggle" aria-label="Toggle navigation">&#9776;</button>
+    <ul class="nav-links">
+      <li><a data-nav="home" class="active">Home</a></li>
+      <li><a data-nav="services">Services</a></li>
+      <li><a data-nav="about">About Us</a></li>
+      <li><a data-nav="submit">Submit Request</a></li>
+      <li><a data-nav="tracking">Track Service</a></li>
+    </ul>
+    <a data-nav="submit" class="nav-cta">Submit Request</a>
+  </nav>
+</header>
+
+<main>
+
+  <!-- ============ HOME ============ -->
+  <div class="page active" id="page-home">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow">Crypto &amp; Digital Asset Recovery</span>
+          <h1>Ethical Hacker For Hire:<span>Recovery Your Digital Asset & Cryptocurrency</span></h1>
+          <p class="lede">Certified ethical hackers are trained cybersecurity professionals who follow recognized. Industry guidelines such as those established by the EC-Council <a href="https://www.eccouncil.org/">(https://www.eccouncil.org/)</a> and the International Council of E-Commerce Consultants. Their role is to identify vulnerabilities, conduct forensic analysis, and assist with lawful digital recovery — not to engage in illegal hacking.<br><br> At A1InvestigatorAgency, our specialists combine ethical hacking certifications with investigative best practices aligned with global cybersecurity frameworks like the National Institute of Standards and Technology (NIST) <a href="https://www.nist.gov/cyberframework/">https://www.nist.gov/cyberframework</a><br><br>If you need lawful data restoration, crypto scam investigation, social media account recovery, or digital infidelity evidence, you can confidently hire certified ethical hackers from our team for secure and confidential assistance.Tracked from your first request to the final report.</p>
+          <div class="btn-row">
+            <a data-nav="submit" class="btn btn-primary">Submit a request</a>
+            <a data-nav="services" class="btn btn-secondary">See what we do</a>
+          </div>
+        </div>
+
+        <div class="terminal">
+          <div class="terminal-bar">
+            <span></span><span></span><span></span>
+            <span class="terminal-title">session</span>
+          </div>
+          <div class="terminal-body" data-terminal='[
+            {"text":"$ A1InvestigatorAgency --new-request","cls":"prompt"},
+            {"text":"> service: custom-web-app"},
+            {"text":"> status: queued for review"},
+            {"text":"$ A1InvestigatorAgency --trace wallet.addr"},
+            {"text":"> scanning ledger history..."},
+            {"text":"OK case opened. ref: REQ-8841X","cls":"ok"}
+          ]'></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="what-we-do">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">What we do</span>
+          <h2>Two disciplines, one team</h2>
+          <p>Most agencies do one or the other. We keep engineers and recovery specialists in the same room,
+            which matters when a case involves both crypto scam and missing funds.</p>
+        </div>
+        <div class="grid-3">
+          <div class="card">
+            <div class="icon">&lt;/&gt;</div>
+            <h3>Ethical Hacker For Digital Asset Recovery</h3>
+            <p>Digital Asset fraud is increasing worldwide. According to the FBI Internet Crime Report <a href="https://www.ic3.gov/Media/PDF/AnnualReport/2023_IC3Report.pdf">https://www.ic3.gov/Media/PDF/AnnualReport/2023_IC3Report.pdf</a>, crypto-related losses continue to rise annually. You can hire certified ethical hackers for crypto scam recovery to conduct blockchain transaction tracing and forensic investigation. Clients also hire a hacker for lost, scammed or stolen digital asset recovery to obtain structured reports that can support legal or civil recovery action.</p>
+          </div>
+          <div class="card blue">
+            <div class="icon">&#128272;</div>
+            <h3>Crypto Recovery</h3>
+            <p>Transaction tracing, exchange and platform liaison, and case documentation for lost, misdirected, or scammed cryptocurrency. Crypto transactions are publicly recorded on the blockchain, which allows forensic tracing. You can hire certified ethical hackers for crypto recovery to analyze wallet transfers and suspicious transactions. We follow blockchain investigative principles consistent with global digital asset compliance guidance from the Financial Action Task Force. Clients also hire a hacker for lost, scammed or stolen bitcoin recovery when legal documentation is required.</p>
+          </div>
+          <div class="card">
+            <div class="icon">&#9881;</div>
+            <h3>Hire a private investigator for cheating spouse</h3>
+            <p>Digital evidence often plays a role in modern relationship disputes. You can hire certified ethical hackers for cheating spouse investigations to conduct lawful digital forensic reviews when proper authorization is provided. Clients also hire a hacker to catch a cheating spouse to combine digital analysis with traditional investigative techniques. <br>Our investigations are conducted in accordance with privacy and consent laws and may include:<br>
+			1. Digital timeline reconstruction<br>
+			2. Metadata review<br>
+			3. Social media activity analysis<br>
+			4. Recovery of deleted communications (when legally permissible)</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="divider">
+
+    <section class="testimonials">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">In their words</span>
+          <h2>What clients say after working with us</h2>
+        </div>
+        <div data-testimonials></div>
+        <p class="testi-note">Sample client feedback. Results vary by case — see our disclaimer below.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="card" style="padding:44px; display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:24px;">
+          <div>
+            <h2 style="margin-bottom:8px;">Ready to start?</h2>
+            <p style="margin:0;">Submit a request and get a reference ID you can track online, any time.</p>
+          </div>
+          <a data-nav="submit" class="btn btn-primary">Submit a request</a>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ============ SERVICES ============ -->
+  <div class="page" id="page-services">
+    <section class="page-hero">
+      <div class="container">
+        <span class="eyebrow">Services</span>
+        <h1>Connect To A Hacker Today</h1>
+        <p>Pick a lane below, or tell us the full situation in your request — a lot of cases involve both
+          software and recovery work at once.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <span class="tag">Ethical Hacker</span>
+        <h2 style="margin-bottom:24px;">Professional &amp; Hacker Service</h2>
+        <div class="grid-3">
+          <div class="card"><div class="icon">&#127760;</div><h3>Ethical Hacker &amp; For Digital Asset Recovery</h3>
+            <p>You can hire certified ethical hackers for crypto scam recovery to conduct blockchain transaction tracing and forensic investigation. Clients also hire a hacker for lost, scammed or stolen digital asset recovery to obtain structured reports that can support legal or civil recovery action.</p></div>
+          <div class="card"><div class="icon">&#128268;</div><h3>Crypto&amp; Recovery</h3>
+            <p>Transaction tracing, exchange and platform liaison, and case documentation for lost, misdirected, or scammed cryptocurrency. Crypto transactions are publicly recorded on the blockchain, which allows forensic tracing. You can hire certified ethical hackers for crypto recovery to analyze wallet transfers and suspicious transactions.</p></div>
+          <div class="card"><div class="icon">&#9881;</div><h3>Hire a private investigator for cheating spouse</h3>
+            <p>Digital evidence often plays a role in modern relationship disputes. You can hire certified ethical hackers for cheating spouse investigations to conduct lawful digital forensic reviews when proper authorization is provided.</p></div>
+          <div class="card"><div class="icon">&#128737;</div><h3>Security Audits</h3>
+            <p>Code and infrastructure review to catch vulnerabilities before an attacker does — smart contracts included.</p></div>
+          <div class="card"><div class="icon">&#128295;</div><h3>Maintenance &amp; Support</h3>
+            <p>Ongoing bug fixes, updates, and monitoring for software you already have, not just what we build.</p></div>
+          <div class="card"><div class="icon">&#128202;</div><h3>Technical Consulting</h3>
+            <p>An honest second opinion on architecture, vendor choices, or a project that's stalled.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="divider">
+
+    <section>
+      <div class="container">
+        <span class="tag">Recovery</span>
+        <h2 style="margin-bottom:12px;">Cryptocurrency Recovery Support</h2>
+        <p style="max-width:640px; margin-bottom:24px;">We help people who've lost access to funds through scams,
+          misdirected transfers, lost credentials, or exchange disputes. We look at every case honestly, including
+          telling you when recovery.</p>
+        <div class="grid-3">
+          <div class="card blue"><div class="icon">&#128270;</div><h3>Transaction Tracing</h3>
+            <p>Following on-chain movement of funds to identify where they ended up, using public ledger data and blockchain analysis tools.</p></div>
+          <div class="card blue"><div class="icon">&#127760;</div><h3>Exchange &amp; Platform Liaison</h3>
+            <p>Preparing documentation and reports that exchanges, law enforcement, or legal counsel can act on.</p></div>
+          <div class="card blue"><div class="icon">&#128273;</div><h3>Wallet Access Recovery</h3>
+            <p>Technical help recovering access to wallets locked out by lost passwords, corrupted files, or partial seed phrases — where technically possible.</p></div>
+          <div class="card blue"><div class="icon">&#128203;</div><h3>Case Documentation</h3>
+            <p>Clear written reports of what happened and what was found, suitable for filing a police report or insurance claim.</p></div>
+          <div class="card blue"><div class="icon">&#9888;</div><h3>Scam Assessment</h3>
+            <p>A plain-language read on whether what happened to you was a scam, and what your realistic options are from here.</p></div>
+          <div class="card blue"><div class="icon">&#128274;</div><h3>Prevention &amp; Hardening</h3>
+            <p>Securing remaining assets and accounts so a second incident doesn't follow the first.</p></div>
+        </div>
+        <p class="disclaimer" style="margin-top:28px;">Cryptocurrency recovery outcomes depend on how funds moved
+          and on the cooperation of third parties we don't control. We guaranteed 100% recovery service, and our service is afford  — Choosing to hire certified ethical hackers is not just about technical expertise — it is about protecting yourself legally, financially, and digitally. In an era where cybercrime losses are increasing globally as reported in the FBI Internet Crime Complaint Center annual report: <a href="https://www.ic3.gov/Media/PDF/AnnualReport/2023_IC3Report.pdf">(https://www.ic3.gov/Media/PDF/AnnualReport/2023_IC3Report.pdf)</a>, working with qualified professionals is essential. </p>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="card" style="padding:40px; text-align:center;">
+          <h2>Not sure which you need?</h2>
+          <p>Tell us what's going on in a request — we'll route it to the right specialist.</p>
+          <a data-nav="submit" class="btn btn-primary">Submit a request</a>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ============ ABOUT ============ -->
+  <div class="page" id="page-about">
+    <section class="page-hero">
+      <div class="container">
+        <span class="eyebrow">About us</span>
+        <h1>Professional Hacker Service</h1>
+        <p>A1InvestigatorAgency service provide ethical hacking solution. Where clients can asked for help tracing funds after a breach or scam — turns out the same debugging instincts apply to following a trail on-chain. <br>A1InvestigatorAgency, we are a premier private investigation company specializing in providing top-notch investigative services for a diverse clientele. With a team of highly skilled and experienced private investigators, we are committed to unearthing the truth, resolving complex matters, and delivering peace of mind to our clients.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="container grid-2" style="align-items:start;">
+        <div>
+          <span class="eyebrow">Our approach</span>
+          <h2>How we work</h2>
+          <p>Every request gets a real person reading it, not a script. We scope the work, tell you honestly
+            what's achievable, and give you a reference ID so you're never left guessing what's happening.</p>
+          <p>n the recovery side specifically: We understand that each case is unique, and so are the needs of our clients. We offer personalized investigation services, tailored to suit your specific requirements.</p>
+          <div class="stat-row">
+            <div class="stat"><b>2019</b><span>Founded</span></div>
+            <div class="stat"><b>120+</b><span>Software projects delivered</span></div>
+            <div class="stat"><b>Case-by-case</b><span>Digital Asset Recovery — guarantees</span></div>
+          </div>
+        </div>
+        <div class="card">
+          <span class="tag">Certicate Ethical Hacker</span>
+          <h3>Who's behind the work</h3>
+          <p style="margin-bottom:16px;">Professional hacker, senior team rather than a large outsourced pool — full-stack
+            agencies, a security service, and analysts experienced with blockchain explorers and exchange
+            escalation processes.</p>
+          <p style="margin-bottom:0;">Replace this section with your real founders, credentials, and licensing
+            details before publishing.</p>
+        </div>
+      </div>
+    </section>
+
+    <hr class="divider">
+
+    <section>
+      <div class="container">
+        <span class="eyebrow">Values</span>
+        <h2 style="margin-bottom:24px;">What we guarantee</h2>
+        <div class="grid-3">
+          <div class="card"><div class="icon">&#10060;</div><h3>We guarantees</h3>
+            <p>We promise a recovery outcome for your digital asset and crypto recovery service. Offer ethical clients service.</p></div>
+          <div class="card"><div class="icon">&#10060;</div><h3>No pressure tactics</h3>
+            <p>No countdowns, no "act now or lose the funds forever." Real cases move at the pace of blockchains and exchanges, not marketing copy.</p></div>
+          <div class="card"><div class="icon">&#10060;</div><h3>No silent cases</h3>
+            <p>You get a reference ID and a tracker. If we can't reach a client for status, that's on us to fix.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="card" style="padding:40px; text-align:center;">
+          <h2>Want to work with us?</h2>
+          <p>Start with a request — we'll follow up directly.</p>
+          <a data-nav="submit" class="btn btn-primary">Submit a request</a>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ============ SUBMIT REQUEST ============ -->
+  <div class="page" id="page-submit">
+    <section class="page-hero">
+      <div class="container">
+        <span class="eyebrow">Submit a request</span>
+        <h1>Tell us what you need</h1>
+        <p>Fill this out for either a software project or a recovery case. You'll get a reference ID at the end
+          to check progress on the <a data-nav="tracking" style="color:var(--accent); text-decoration:underline;">Track Service</a> page.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="container" style="max-width:720px;">
+        <div id="form-success" class="alert alert-success">
+          <strong>Request submitted.</strong> Keep this reference ID somewhere safe — you'll need it to check status.
+          <div class="ref-box" id="ref-id">REQ-000000</div>
+        </div>
+        <div id="form-error" class="alert alert-error"></div>
+
+        <form id="request-form" class="form-card" novalidate>
+          <div class="field-row">
+            <div class="field">
+              <label for="name">Full name</label>
+              <input type="text" id="name" name="name" placeholder="Jordan Ade" required>
+            </div>
+            <div class="field">
+              <label for="email">Email address</label>
+              <input type="email" id="email" name="email" placeholder="you@example.com" required>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="service">What do you need help with?</label>
+            <select id="service" name="service" required>
+              <option value="" disabled selected>Choose a service</option>
+              <option value="Digital Asset Recovery">Digital Asset Recovery</option>
+              <option value="Cybersecurity">Cybersecurity</option>
+              <option value="Crypto Recovery Service">Crypto Recovery Service</option>
+              <option value="Technical Consulting">Technical Consulting</option>
+              <option value="Crypto Wallet Recovery">Crypto Wallet Recovery</option>
+              <option value="Scam / Transaction Tracing">Scam / Transaction Tracing</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="message">Describe your project or case</label>
+            <textarea id="message" name="message" placeholder="Digital asset Recovery: Tell us about your case . For recovery: what happened, roughly when, and which platform or wallet was involved." required></textarea>
+            <div class="hint">Please avoid pasting private keys or seed phrases anywhere — we will never ask for them by form or email.</div>
+          </div>
+
+          <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center;">Submit request</button>
+        </form>
+      </div>
+    </section>
+  </div>
+
+  <!-- ============ TRACKING ============ -->
+  <div class="page" id="page-tracking">
+    <section class="page-hero">
+      <div class="container">
+        <span class="eyebrow">Track service</span>
+        <h1>Check your request status</h1>
+        <p>Enter the reference ID you received after submitting a request.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="container" style="max-width:720px;">
+        <form id="track-form" class="form-card" novalidate style="margin-bottom:28px;">
+          <div class="field">
+            <label for="refId">Reference ID</label>
+            <input type="text" id="refId" name="refId" placeholder="REQ-8841XABCDE" required>
+            <div class="hint">This is the code shown after you submitted your request.</div>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center;">Check status</button>
+        </form>
+
+        <div id="track-error" class="alert alert-error"></div>
+        <div id="track-result"></div>
+
+        <p class="disclaimer" style="margin-top:24px;">Service tracker reads reference IDs stored in your
+          browser's local storage at the time of submission, so it only works on the same device and browser you
+          used to submit the request.</p>
+      </div>
+    </section>
+  </div>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <a data-nav="home" class="logo">&lt;A1InvestigatorAgency<span class="dot">/</span>&gt;</a>
+        <p style="margin-top:14px; max-width:320px;">Digital assets and cryptocurrency recovery support,
+          handled by one accountable team.</p>
+      </div>
+      <div>
+        <h4>A1InvestigatorAgency</h4>
+        <ul>
+          <li><a data-nav="home">Home</a></li>
+          <li><a data-nav="services">Services</a></li>
+          <li><a data-nav="about">About Us</a></li>
+          <li><a data-nav="submit">Submit Request</a></li>
+          <li><a data-nav="tracking">Track Service</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:A1investigatoragency@tutamail.com">A1investigatoragency@tutamail.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 A1InvestigatorAgency. All rights reserved.</span>
+      <span>Built with transparency</span>
+    </div>
+    <p class="disclaimer">A1InvestigatorAgency guarantee the recovery of any cryptocurrency asset; outcomes depend on factors outside our control, including how funds were moved and the cooperation of third-party platforms. At our private investigation company, we’re committed to providing our clients with the highest level of service and professionalism. With years of experience in the field, our team of investigators has the expertise and resources to help you uncover the information you need, no matter how complex or sensitive the situation. We understand that every case is unique, and we’ll work with you to develop a customized investigation plan that meets your specific needs.</p>
+  </div>
+</footer>
+
+<script>
+/* =========================================================
+   SPA NAVIGATION
+   ========================================================= */
+function showPage(name) {
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  const target = document.querySelector('#page-' + name);
+  if (target) target.classList.add('active');
+
+  document.querySelectorAll('.nav-links a[data-nav]').forEach(a => {
+    a.classList.toggle('active', a.getAttribute('data-nav') === name);
+  });
+
+  window.scrollTo({ top: 0, behavior: 'instant' in window ? 'instant' : 'auto' });
+  document.querySelector('.nav-links')?.classList.remove('open');
+}
+
+function initNav() {
+  document.querySelectorAll('[data-nav]').forEach(el => {
+    el.addEventListener('click', (e) => {
+      e.preventDefault();
+      showPage(el.getAttribute('data-nav'));
+    });
+  });
+}
+
+function initNavToggle() {
+  const toggle = document.querySelector('.nav-toggle');
+  const links = document.querySelector('.nav-links');
+  if (!toggle || !links) return;
+  toggle.addEventListener('click', () => links.classList.toggle('open'));
+}
+
+/* Faint background glyphs (decorative) */
+function initCodeBackground() {
+  const el = document.querySelector('.code-bg .glyphs');
+  if (!el) return;
+  const snippets = [
+    'function verifyChain(tx) {', '  const block = await chain.getBlock(tx.hash);',
+    '  return block.confirmations > 6;', '}', '', 'class RecoveryCase {',
+    '  constructor(walletId) {', '    this.status = "pending";', '  }', '}',
+    '', 'SELECT * FROM requests WHERE status = "open";', '',
+    'git commit -m "harden auth flow"', 'npm run build --prod', '',
+    'const secured = await audit.run(contract);', 'if (secured) deploy();'
+  ];
+  let out = '';
+  for (let i = 0; i < 26; i++) out += snippets[i % snippets.length] + '\n';
+  el.textContent = out;
+  el.setAttribute('aria-hidden', 'true');
+}
+
+/* Hero terminal typing animation */
+function initTerminalTyping() {
+  const body = document.querySelector('[data-terminal]');
+  if (!body) return;
+  const lines = JSON.parse(body.getAttribute('data-terminal'));
+  body.innerHTML = '';
+  let li = 0;
+
+  function typeLine() {
+    if (li >= lines.length) return;
+    const { text, cls } = lines[li];
+    const span = document.createElement('span');
+    span.className = 'line' + (cls ? ' ' + cls : '');
+    body.appendChild(span);
+    let ci = 0;
+    const speed = 16;
+    (function type() {
+      if (ci <= text.length) {
+        span.textContent = text.slice(0, ci);
+        ci++;
+        setTimeout(type, speed);
+      } else {
+        li++;
+        setTimeout(typeLine, 220);
+      }
+    })();
+  }
+  typeLine();
+
+  const cursor = document.createElement('span');
+  cursor.className = 'cursor';
+  body.appendChild(cursor);
+}
+
+/* Testimonials data + alternating render */
+const TESTIMONIALS = [
+  { initials: 'MA', name: 'M. Fanny Remi', role: 'Founder, retail SaaS startup',
+    quote: 'The team handled my case professionally, kept me informed throughout the process, and provided excellent support.' },
+  { initials: 'JK', name: 'J. Kowalski', role: 'Wallet holder, recovery case',
+    quote: 'I appreciated that they were upfront about the limits of what could actually be traced and recovered — no promises they couldn\'t keep.' },
+  { initials: 'RS', name: 'R. Silva', role: 'Product Lead, fintech app',
+    quote: 'Good communicators. I had an excellent experience. The team was professional, responsive, and helped me recover my digital assets. I highly recommend their service.' },
+  { initials: 'TN', name: 'T. Nakamura', role: 'Small business owner',
+    quote: 'Submitted a request, got a real response within a day, and could track progress the whole time instead of guessing.' },
+  { initials: 'AO', name: 'Carlos Freddie', role: 'Trader',
+    quote: 'I was impressed by the professionalism and communication throughout the process. They helped me recover my cryptocurrency and kept me updated every step of the way. I highly recommend their service.' },
+  { initials: 'DL', name: 'D. Lindqvist', role: 'Recovery case, exchange account',
+    quote: 'Realistic from the first call about odds of success. That honesty is rare in this space and it\'s why I trusted the process.' }
+];
+
+function renderTestimonials() {
+  const container = document.querySelector('[data-testimonials]');
+  if (!container) return;
+  container.innerHTML = TESTIMONIALS.map((t, i) => {
+    const side = i % 2 === 0 ? 'left' : 'right';
+    return `
+      <div class="testi-row ${side}">
+        <div class="testi-card">
+          <p class="testi-quote">&ldquo;${t.quote}&rdquo;</p>
+          <div class="testi-meta">
+            <div class="testi-avatar">${t.initials}</div>
+            <div>
+              <div class="testi-name">${t.name}</div>
+              <div class="testi-role">${t.role}</div>
+            </div>
+          </div>
+        </div>
+      </div>`;
+  }).join('');
+}
+
+/* SUBMIT REQUEST FORM (client-side demo — wire to a real backend/email service before going live) */
+function generateReferenceId() {
+  const rand = Math.random().toString(36).slice(2, 7).toUpperCase();
+  const stamp = Date.now().toString().slice(-4);
+  return `REQ-${stamp}${rand}`;
+}
+
+function initSubmitForm() {
+  const form = document.querySelector('#request-form');
+  if (!form) return;
+
+  // Sends submissions to A1investigatoragency@tutamail.com via FormSubmit (no signup required)
+  const FORMSPREE_ENDPOINT = 'https://formsubmit.co/ajax/A1investigatoragency@tutamail.com';
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const successAlert = document.querySelector('#form-success');
+    const errorAlert = document.querySelector('#form-error');
+    successAlert.classList.remove('show');
+    errorAlert.classList.remove('show');
+
+    const data = {
+      name: form.name.value.trim(),
+      email: form.email.value.trim(),
+      service: form.service.value,
+      message: form.message.value.trim(),
+      submittedAt: new Date().toISOString(),
+      status: 'submitted'
+    };
+
+    if (!data.name || !data.email || !data.service || !data.message) {
+      errorAlert.textContent = 'Please fill in every field before submitting.';
+      errorAlert.classList.add('show');
+      return;
+    }
+
+    const refId = generateReferenceId();
+
+    // Save locally so the Tracking page can still look this request up
+    try {
+      const all = JSON.parse(localStorage.getItem('requests') || '{}');
+      all[refId] = data;
+      localStorage.setItem('requests', JSON.stringify(all));
+    } catch (err) {
+      console.warn('Could not persist request locally:', err);
+    }
+
+    // Actually send the email
+    const submitBtn = form.querySelector('button[type="submit"]');
+    try {
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Sending...';
+
+      const response = await fetch(FORMSPREE_ENDPOINT, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify({ ...data, referenceId: refId })
+      });
+
+      if (!response.ok) throw new Error('Email send failed');
+
+      document.querySelector('#ref-id').textContent = refId;
+      successAlert.classList.add('show');
+      form.reset();
+    } catch (err) {
+      console.error('Formspree submission error:', err);
+      errorAlert.textContent = 'Something went wrong sending your request. Please try again, or email us directly.';
+      errorAlert.classList.add('show');
+    } finally {
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'Submit request';
+    }
+  });
+}
+
+/* TRACKING PAGE */
+const STAGE_ORDER = ['submitted', 'reviewing', 'in_progress', 'completed'];
+const STAGE_LABELS = {
+  submitted:   { title: 'Request received', desc: 'Your request has been logged and given a reference ID.' },
+  reviewing:   { title: 'Under review', desc: 'A specialist is reviewing the details you provided.' },
+  in_progress: { title: 'Work in progress', desc: 'Your case or project is actively being worked on.' },
+  completed:   { title: 'Completed', desc: 'Work is finished. You\'ll be contacted with full details.' }
+};
+
+function initTrackingForm() {
+  const form = document.querySelector('#track-form');
+  if (!form) return;
+  const resultBox = document.querySelector('#track-result');
+  const errorBox = document.querySelector('#track-error');
+
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const refId = form.refId.value.trim().toUpperCase();
+    errorBox.classList.remove('show');
+    resultBox.innerHTML = '';
+
+    let record = null;
+    try {
+      const all = JSON.parse(localStorage.getItem('requests') || '{}');
+      record = all[refId] || null;
+    } catch (err) {
+      console.warn('Could not read local requests:', err);
+    }
+
+    if (!record) {
+      errorBox.textContent = `No request found for "${refId}" in this browser. Reference IDs are only stored on the device used to submit the request in this demo — a live backend would let you check from anywhere.`;
+      errorBox.classList.add('show');
+      return;
+    }
+
+    const minutesElapsed = (Date.now() - new Date(record.submittedAt).getTime()) / 60000;
+    let stageIndex = 0;
+    if (minutesElapsed > 0.5) stageIndex = 1;
+    if (minutesElapsed > 2) stageIndex = 2;
+    if (minutesElapsed > 5) stageIndex = 3;
+
+    const html = STAGE_ORDER.map((key, i) => {
+      const info = STAGE_LABELS[key];
+      let cls = '';
+      if (i < stageIndex) cls = 'done';
+      else if (i === stageIndex) cls = 'current';
+      const icon = i < stageIndex ? '✓' : (i + 1);
+      return `
+        <div class="track-step ${cls}">
+          <div class="track-dot">${icon}</div>
+          <div>
+            <h4>${info.title}</h4>
+            <p>${info.desc}</p>
+          </div>
+        </div>`;
+    }).join('');
+
+    resultBox.innerHTML = `
+      <div class="ref-box">Reference: ${refId} &nbsp;•&nbsp; Service: ${record.service}</div>
+      <div class="track-steps">${html}</div>
+    `;
+  });
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  initNav();
+  initNavToggle();
+  initCodeBackground();
+  initTerminalTyping();
+  renderTestimonials();
+  initSubmitForm();
+  initTrackingForm();
+});
+</script>
+</body>
+</html>
